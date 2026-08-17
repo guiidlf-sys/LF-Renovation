@@ -61,10 +61,12 @@ inchangés par rapport à la version précédente (pages internes pilotées en J
   ville `[Votre ville]` — répétés dans l'en-tête, le pied de page et les formulaires de
   chaque page publique, ainsi que dans `mentions-legales.html`.
 - **Avis clients** (`avis.html`, aperçu sur `index.html`) : témoignages d'exemple à remplacer.
-- **Réalisations** (`realisations.html`, aperçu sur `index.html`) : vignettes en dégradé de
-  couleur en attendant de vraies photos. Remplacez le `style="background:..."` d'une
-  `.gallery-thumb` par `background:url('images/mon-chantier.jpg') center/cover;` et déposez
-  le fichier dans `images/`.
+- **Réalisations** (`realisations.html`, aperçu sur `index.html`, page Réalisations de
+  l'espace pro) : les vignettes utilisent pour l'instant des photos libres de droits
+  (Unsplash) illustrant chaque type de chantier, à remplacer par vos vraies photos dès que
+  possible. Remplacez l'URL dans le `style="background:url('...')"` d'une `.gallery-thumb`
+  par `background:url('images/mon-chantier.jpg') center/cover;` et déposez le fichier dans
+  `images/`.
 - **Mentions légales** : SIRET, adresse, assureur décennal et hébergeur à compléter.
 - **Espace pro** : chiffre d'affaires, devis, chantiers — données d'exemple dans
   `admin/index.html`, voir aussi `js/admin.js` pour les jeux de données du graphique.

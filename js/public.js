@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelectorAll('.nav-dropdown > a').forEach((trigger) => {
       trigger.addEventListener('click', (e) => {
-        if (window.innerWidth <= 900) {
+        if (window.innerWidth <= 1080) {
           e.preventDefault();
           trigger.parentElement.classList.toggle('open');
         }

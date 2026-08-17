@@ -354,6 +354,7 @@ h1, h2, h3, h4 {
 /* ---------- Pill tabs ---------- */
 .pill-tabs {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   padding: 18px 32px 0;
 }
@@ -513,6 +514,7 @@ h1, h2, h3, h4 {
 /* Devis list (watchlist) */
 .filter-pills {
   display: flex;
+  flex-wrap: wrap;
   gap: 6px;
   margin-bottom: 14px;
 }

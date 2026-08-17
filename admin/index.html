@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LF Rénovation — Espace Pro</title>
+<meta name="description" content="LF Rénovation, artisan auto-entrepreneur en rénovation intérieure et extérieure. Suivez vos devis, vos chantiers et votre activité en un coup d'œil.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23b48ee0%22/><text x=%2250%22 y=%2266%22 font-size=%2252%22 font-family=%22sans-serif%22 font-weight=%22700%22 fill=%22%23150e1b%22 text-anchor=%22middle%22>LF</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+
+<div class="canvas">
+  <div class="sidebar-backdrop"></div>
+
+  <div class="app-shell">
+
+    <!-- ============ SIDEBAR ============ -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <span class="mark">LF</span>
+        LF Rénovation
+      </div>
+
+      <a href="../index.html" class="sidebar-public-link">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+        Voir le site public
+      </a>
+
+      <nav class="sidebar-nav">
+        <a href="#" data-page="dashboard" class="active">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9"></rect><rect x="14" y="3" width="7" height="5"></rect><rect x="14" y="12" width="7" height="9"></rect><rect x="3" y="16" width="7" height="5"></rect></svg>
+          Dashboard
+        </a>
+        <a href="#" data-page="services">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7h-3V5a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v2H8a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"></path><path d="M2 13h10"></path></svg>
+          Services
+        </a>
+        <a href="#" data-page="realisations">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg>
+          Réalisations
+        </a>
+        <a href="#" data-page="devis">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6"></path><path d="M9 15l2 2 4-4"></path></svg>
+          Devis
+        </a>
+        <a href="#" data-page="avis">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          Avis clients
+        </a>
+      </nav>
+
+      <div class="sidebar-foot">
+        <a href="../mentions-legales.html">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+          Paramètres
+        </a>
+        <a href="#" data-page="devis">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          Support
+        </a>
+      </div>
+    </aside>
+
+    <!-- ============ MAIN ============ -->
+    <div class="main-col">
+
+      <div class="topbar">
+        <button class="sidebar-toggle" aria-label="Ouvrir le menu">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+
+        <div class="welcome">
+          <h1>Bienvenue, <span class="accent">Ludovic</span></h1>
+          <p>Voici l'aperçu de votre activité de rénovation</p>
+        </div>
+
+        <div class="topbar-actions">
+          <div style="position:relative;">
+            <button id="notif-btn" class="icon-btn" aria-label="Notifications">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+              <span class="dot"></span>
+            </button>
+            <div id="notif-panel" class="dropdown-panel">
+              <h5>Notifications</h5>
+              <div class="notif-item">
+                <span class="ndot"></span>
+                <div><div class="t">Devis accepté</div><div class="s">Sophie M. a accepté le devis « Salle de bain ».</div></div>
+              </div>
+              <div class="notif-item">
+                <span class="ndot"></span>
+                <div><div class="t">Nouvelle demande</div><div class="s">Amélie F. a demandé un devis pour une cuisine.</div></div>
+              </div>
+              <div class="notif-item">
+                <span class="ndot"></span>
+                <div><div class="t">Chantier terminé</div><div class="s">Peinture salon (Marc P.) marqué comme terminé.</div></div>
+              </div>
+            </div>
+          </div>
+
+          <a href="../mentions-legales.html" class="icon-btn" aria-label="Paramètres">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+          </a>
+
+          <div class="profile">
+            <div class="avatar">LF</div>
+            <div>
+              <div class="name">Ludovic F.</div>
+              <div class="mail">contact@lf-renovation.fr</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="assistant-row">
+        <form id="assistant-form" class="assistant-bar">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input id="assistant-input" type="text" placeholder="Demandez quelque chose à l'assistant LF Rénovation">
+          <button type="submit" aria-label="Envoyer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+          </button>
+        </form>
+        <div id="assistant-answer" class="assistant-answer"></div>
+      </div>
+
+      <div class="pill-tabs">
+        <button class="pill-tab active" data-page="dashboard">Aperçu</button>
+        <button class="pill-tab" data-page="devis">Devis</button>
+        <button class="pill-tab" data-page="realisations">Chantiers</button>
+      </div>
+
+      <!-- ============ PAGE: DASHBOARD ============ -->
+      <section class="page active" data-page="dashboard">
+        <div class="dash-grid">
+
+          <div class="dash-col">
+            <div class="card">
+              <div class="card-head">
+                <h3>Chiffre d'affaires</h3>
+                <div class="period-dropdown">
+                  <button id="period-btn" class="period-btn">
+                    <span id="period-label">6 mois</span>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                  </button>
+                  <div id="period-menu" class="period-menu">
+                    <button data-period="1m" data-label="1 mois">1 mois</button>
+                    <button data-period="6m" data-label="6 mois">6 mois</button>
+                    <button data-period="1a" data-label="1 an">1 an</button>
+                  </div>
+                </div>
+              </div>
+              <div id="revenue-value" class="stat-value">12 304,11 €</div>
+            </div>
+
+            <div class="card ai-card">
+              <h3>Devis assistés par IA</h3>
+              <p>Obtenez une estimation instantanée basée sur des chantiers similaires déjà réalisés.</p>
+              <button class="ai-btn" data-goto="devis">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M18.4 5.6l-2.8 2.8M8.4 15.6l-2.8 2.8"></path></svg>
+                Estimer mon projet
+              </button>
+            </div>
+          </div>
+
+          <div class="dash-col">
+            <div class="card" style="flex:1;">
+              <div class="card-head"><h3>Devis en cours</h3></div>
+              <div class="filter-pills devis-filters" data-target="#devis-list-mini .devis-row">
+                <button class="active" data-filter="all">Récents</button>
+                <button data-filter="accepte">Acceptés</button>
+                <button data-filter="attente">En attente</button>
+              </div>
+              <div id="devis-list-mini">
+                <div class="devis-row" data-status="accepte">
+                  <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16"></path><path d="M6 12V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v6"></path></svg></div>
+                  <div class="who"><div class="n">Sophie Martin</div><div class="s">Salle de bain</div></div>
+                  <div class="amt"><div class="a">3 450 €</div><div class="p up">+12,3%</div></div>
+                </div>
+                <div class="devis-row" data-status="accepte">
+                  <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22h20"></path><path d="M4 22V12l8-6 8 6v10"></path></svg></div>
+                  <div class="who"><div class="n">Julien Dupont</div><div class="s">Terrasse bois</div></div>
+                  <div class="amt"><div class="a">5 200 €</div><div class="p up">+8,1%</div></div>
+                </div>
+                <div class="devis-row" data-status="attente">
+                  <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"></path><path d="M5 21V9l7-5 7 5v12"></path></svg></div>
+                  <div class="who"><div class="n">Claire Roux</div><div class="s">Façade</div></div>
+                  <div class="amt"><div class="a">4 890 €</div><div class="p pending">En attente</div></div>
+                </div>
+                <div class="devis-row" data-status="accepte">
+                  <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2l4 4-13 13H5v-4L18 2z"></path></svg></div>
+                  <div class="who"><div class="n">Marc Petit</div><div class="s">Peinture salon</div></div>
+                  <div class="amt"><div class="a">1 250 €</div><div class="p up">+2,1%</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dash-col">
+            <div class="card" style="flex:1;">
+              <div class="card-head">
+                <h3>Mes chantiers</h3>
+                <button class="link-btn" data-goto="realisations">
+                  Voir tout
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </button>
+              </div>
+              <div class="chantiers-grid">
+                <div class="chantier-card">
+                  <div class="amt">3 450 €</div>
+                  <div class="badge">+65% avancement</div>
+                  <div class="meta">
+                    <div class="cat"><span class="ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16"></path><path d="M6 12V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v6"></path></svg></span>SDB</div>
+                    <div class="surf">8 m²</div>
+                  </div>
+                </div>
+                <div class="chantier-card">
+                  <div class="amt">5 200 €</div>
+                  <div class="badge">+40% avancement</div>
+                  <div class="meta">
+                    <div class="cat"><span class="ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22h20"></path><path d="M4 22V12l8-6 8 6v10"></path></svg></span>TER</div>
+                    <div class="surf">32 m²</div>
+                  </div>
+                </div>
+                <div class="chantier-card">
+                  <div class="amt">4 890 €</div>
+                  <div class="badge">+90% avancement</div>
+                  <div class="meta">
+                    <div class="cat"><span class="ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"></path><path d="M5 21V9l7-5 7 5v12"></path></svg></span>FAC</div>
+                    <div class="surf">65 m²</div>
+                  </div>
+                </div>
+                <div class="chantier-card">
+                  <div class="amt">1 250 €</div>
+                  <div class="badge">100% terminé</div>
+                  <div class="meta">
+                    <div class="cat"><span class="ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2l4 4-13 13H5v-4L18 2z"></path></svg></span>PEI</div>
+                    <div class="surf">22 m²</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card chart-card">
+          <div class="chart-head">
+            <h3>Suivi du chiffre d'affaires</h3>
+            <div class="range-pills">
+              <button data-range="1s">1S</button>
+              <button data-range="1m">1M</button>
+              <button data-range="6m">6M</button>
+              <button data-range="1a" class="active">1A</button>
+            </div>
+          </div>
+          <div class="chart-wrap">
+            <svg id="revenue-chart" class="chart-svg" viewBox="0 0 800 220" preserveAspectRatio="none"></svg>
+            <div id="chart-tooltip" class="chart-tooltip"></div>
+          </div>
+          <div id="chart-months" class="chart-months"></div>
+        </div>
+      </section>
+
+      <!-- ============ PAGE: SERVICES ============ -->
+      <section class="page" data-page="services">
+        <div class="page-head">
+          <span class="eyebrow">Services</span>
+          <h2>Intérieur &amp; extérieur, tout est couvert</h2>
+          <p>Un artisan unique pour l'ensemble de vos travaux de rénovation.</p>
+        </div>
+
+        <div class="services-grid">
+          <div class="card service-tile">
+            <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2l4 4-13 13H5v-4L18 2z"></path></svg></div>
+            <div><h4>Peinture &amp; décoration</h4><p>Murs, plafonds, enduits décoratifs et papiers peints, finitions soignées.</p></div>
+          </div>
+          <div class="card service-tile">
+            <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></div>
+            <div><h4>Revêtements de sols</h4><p>Carrelage, parquet, sols souples, ragréage et préparation des supports.</p></div>
+          </div>
+          <div class="card service-tile">
+            <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v18H3z"></path><path d="M3 9h18"></path><path d="M9 21V9"></path></svg></div>
+            <div><h4>Cloisons &amp; isolation</h4><p>Création de cloisons, doublage, isolation thermique et phonique.</p></div>
+          </div>
+          <div class="card service-tile">
+            <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16"></path><path d="M6 12V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v6"></path><path d="M4 12v6a2 2 0 0 0 2 2h1"></path><path d="M20 12v6a2 2 0 0 1-2 2h-1"></path></svg></div>
+            <div><h4>Cuisine &amp; salle de bain</h4><p>Rénovation complète ou partielle, plomberie de finition, pose de mobilier.</p></div>
+          </div>
+          <div class="card service-tile">
+            <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"></path><path d="M5 21V9l7-5 7 5v12"></path><path d="M9 21v-6h6v6"></path></svg></div>
+            <div><h4>Façade &amp; ravalement</h4><p>Ravalement, enduit, nettoyage et protection contre les intempéries.</p></div>
+          </div>
+          <div class="card service-tile">
+            <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22h20"></path><path d="M4 22V12l8-6 8 6v10"></path><path d="M9 22v-6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v6"></path></svg></div>
+            <div><h4>Terrasses &amp; extérieurs</h4><p>Terrasses bois ou composite, dallage, allées sur mesure.</p></div>
+          </div>
+          <div class="card service-tile">
+            <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-6 9 6"></path><path d="M4 10v10h16V10"></path></svg></div>
+            <div><h4>Toiture &amp; étanchéité</h4><p>Petites réparations, entretien, étanchéité et traitement de charpente.</p></div>
+          </div>
+          <div class="card service-tile">
+            <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V8l4-3 4 3v13"></path><path d="M12 21V8l4-3 4 3v13"></path></svg></div>
+            <div><h4>Clôtures &amp; portails</h4><p>Pose de clôtures, portails, brise-vues et aménagements légers.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ PAGE: RÉALISATIONS ============ -->
+      <section class="page" data-page="realisations">
+        <div class="page-head">
+          <span class="eyebrow">Réalisations</span>
+          <h2>Chantiers récents</h2>
+          <p>Un aperçu des derniers projets menés, en intérieur comme en extérieur.</p>
+        </div>
+
+        <div class="filter-pills gallery-filters" style="margin-bottom:22px;">
+          <button class="active" data-filter="all">Tous</button>
+          <button data-filter="interieur">Intérieur</button>
+          <button data-filter="exterieur">Extérieur</button>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="gallery-card" data-category="interieur">
+            <div class="gallery-thumb" style="background:linear-gradient(135deg,#b48ee0,#5b3d80);">
+              <span class="cat-badge">Intérieur</span>
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h16"></path><path d="M6 12V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v6"></path></svg>
+            </div>
+            <div class="gallery-body"><h4>Rénovation salle de bain</h4><p>Douche à l'italienne, carrelage grand format, meuble suspendu.</p></div>
+          </div>
+
+          <div class="gallery-card" data-category="exterieur">
+            <div class="gallery-thumb" style="background:linear-gradient(135deg,#2a1f33,#150e1b);">
+              <span class="cat-badge">Extérieur</span>
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 22h20"></path><path d="M4 22V12l8-6 8 6v10"></path></svg>
+            </div>
+            <div class="gallery-body"><h4>Terrasse en bois composite</h4><p>40 m² avec garde-corps et éclairage intégré.</p></div>
+          </div>
+
+          <div class="gallery-card" data-category="interieur">
+            <div class="gallery-thumb" style="background:linear-gradient(135deg,#f0a8cf,#8a4f6d);">
+              <span class="cat-badge">Intérieur</span>
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M18 2l4 4-13 13H5v-4L18 2z"></path></svg>
+            </div>
+            <div class="gallery-body"><h4>Peinture &amp; enduit décoratif</h4><p>Rafraîchissement complet d'un salon de 30 m².</p></div>
+          </div>
+
+          <div class="gallery-card" data-category="exterieur">
+            <div class="gallery-thumb" style="background:linear-gradient(135deg,#6d5a8a,#241a2e);">
+              <span class="cat-badge">Extérieur</span>
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 21h18"></path><path d="M5 21V9l7-5 7 5v12"></path></svg>
+            </div>
+            <div class="gallery-body"><h4>Ravalement de façade</h4><p>Nettoyage, réparation d'enduit et peinture façade.</p></div>
+          </div>
+
+          <div class="gallery-card" data-category="interieur">
+            <div class="gallery-thumb" style="background:linear-gradient(135deg,#8c8294,#2a1f33);">
+              <span class="cat-badge">Intérieur</span>
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+            </div>
+            <div class="gallery-body"><h4>Pose de parquet contrecollé</h4><p>60 m² en pose flottante, plinthes assorties.</p></div>
+          </div>
+
+          <div class="gallery-card" data-category="exterieur">
+            <div class="gallery-thumb" style="background:linear-gradient(135deg,#b48ee0,#f0a8cf);">
+              <span class="cat-badge">Extérieur</span>
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 21V8l4-3 4 3v13"></path><path d="M12 21V8l4-3 4 3v13"></path></svg>
+            </div>
+            <div class="gallery-body"><h4>Clôture &amp; portail sur-mesure</h4><p>Clôture bois et portail motorisé.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ PAGE: DEVIS ============ -->
+      <section class="page" data-page="devis">
+        <div class="page-head">
+          <span class="eyebrow">Devis</span>
+          <h2>Demander un devis gratuit</h2>
+          <p>Réponse sous 48h, sans engagement de votre part.</p>
+        </div>
+
+        <div class="devis-layout">
+          <div class="card">
+            <div id="form-success" class="form-success">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+              Merci ! Votre demande a bien été enregistrée.
+            </div>
+            <form id="devis-form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="nom">Nom complet *</label>
+                  <input type="text" id="nom" name="nom" required placeholder="Votre nom">
+                </div>
+                <div class="form-group">
+                  <label for="telephone">Téléphone *</label>
+                  <input type="tel" id="telephone" name="telephone" required placeholder="06 XX XX XX XX">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="email">E-mail *</label>
+                <input type="email" id="email" name="email" required placeholder="vous@exemple.fr">
+              </div>
+              <div class="form-group">
+                <label for="type-projet">Type de projet</label>
+                <select id="type-projet" name="type-projet">
+                  <option value="interieur">Rénovation intérieure</option>
+                  <option value="exterieur">Rénovation extérieure</option>
+                  <option value="les-deux">Intérieur &amp; extérieur</option>
+                  <option value="autre">Autre</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="message">Votre projet *</label>
+                <textarea id="message" name="message" required placeholder="Décrivez votre projet, la surface concernée, le délai souhaité..."></textarea>
+              </div>
+              <button type="submit" class="form-submit">Envoyer ma demande de devis</button>
+            </form>
+          </div>
+
+          <div style="display:flex;flex-direction:column;gap:20px;">
+            <div class="card">
+              <div class="card-head"><h3>Tous les devis</h3></div>
+              <div class="filter-pills devis-filters" data-target="#devis-list-full .devis-row">
+                <button class="active" data-filter="all">Tous</button>
+                <button data-filter="accepte">Acceptés</button>
+                <button data-filter="attente">En attente</button>
+              </div>
+              <div id="devis-list-full" class="devis-table">
+                <div class="devis-row" data-status="accepte">
+                  <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16"></path><path d="M6 12V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v6"></path></svg></div>
+                  <div class="who"><div class="n">Sophie Martin</div><div class="s">Salle de bain</div></div>
+                  <div class="amt"><div class="a">3 450 €</div><div class="p up">Accepté</div></div>
+                </div>
+                <div class="devis-row" data-status="accepte">
+                  <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22h20"></path><path d="M4 22V12l8-6 8 6v10"></path></svg></div>
+                  <div class="who"><div class="n">Julien Dupont</div><div class="s">Terrasse bois</div></div>
+                  <div class="amt"><div class="a">5 200 €</div><div class="p up">Accepté</div></div>
+                </div>
+                <div class="devis-row" data-status="attente">
+                  <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"></path><path d="M5 21V9l7-5 7 5v12"></path></svg></div>
+                  <div class="who"><div class="n">Claire Roux</div><div class="s">Façade</div></div>
+                  <div class="amt"><div class="a">4 890 €</div><div class="p pending">En attente</div></div>
+                </div>
+                <div class="devis-row" data-status="accepte">
+                  <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2l4 4-13 13H5v-4L18 2z"></path></svg></div>
+                  <div class="who"><div class="n">Marc Petit</div><div class="s">Peinture salon</div></div>
+                  <div class="amt"><div class="a">1 250 €</div><div class="p up">Accepté</div></div>
+                </div>
+                <div class="devis-row" data-status="attente">
+                  <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16"></path><path d="M6 12V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v6"></path><path d="M4 12v6a2 2 0 0 0 2 2h1"></path><path d="M20 12v6a2 2 0 0 1-2 2h-1"></path></svg></div>
+                  <div class="who"><div class="n">Amélie Fabre</div><div class="s">Cuisine</div></div>
+                  <div class="amt"><div class="a">6 300 €</div><div class="p pending">En attente</div></div>
+                </div>
+                <div class="devis-row" data-status="accepte">
+                  <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-6 9 6"></path><path d="M4 10v10h16V10"></path></svg></div>
+                  <div class="who"><div class="n">Karim Haddad</div><div class="s">Toiture</div></div>
+                  <div class="amt"><div class="a">2 980 €</div><div class="p up">Accepté</div></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card contact-block">
+              <div class="card-head"><h3>Me contacter directement</h3></div>
+              <div class="contact-row">
+                <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></div>
+                <div><h5>Téléphone</h5><a href="tel:+33600000000">06 XX XX XX XX</a></div>
+              </div>
+              <div class="contact-row">
+                <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"></path><path d="M22 6l-10 7L2 6"></path></svg></div>
+                <div><h5>E-mail</h5><a href="mailto:contact@lf-renovation.fr">contact@lf-renovation.fr</a></div>
+              </div>
+              <div class="contact-row">
+                <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+                <div><h5>Zone d'intervention</h5><p>[Votre ville] et environs (30 km)</p></div>
+              </div>
+              <div class="contact-row">
+                <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></div>
+                <div><h5>Disponibilité</h5><p>Lun - Sam : 8h - 19h</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ PAGE: AVIS ============ -->
+      <section class="page" data-page="avis">
+        <div class="page-head">
+          <span class="eyebrow">Avis clients</span>
+          <h2>Ce que disent mes clients</h2>
+          <p>La satisfaction de mes clients est ma meilleure carte de visite.</p>
+        </div>
+
+        <div class="testimonial-grid">
+          <div class="card testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="quote">« Travail très soigné pour la rénovation de notre salle de bain. Délais respectés et chantier laissé propre chaque soir. »</p>
+            <div class="testimonial-author">
+              <span class="initials">SM</span>
+              <div><div class="name">Sophie M.</div><div class="project">Rénovation salle de bain</div></div>
+            </div>
+          </div>
+          <div class="card testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="quote">« Devis clair, artisan à l'écoute et très professionnel. Notre terrasse est magnifique. »</p>
+            <div class="testimonial-author">
+              <span class="initials">JD</span>
+              <div><div class="name">Julien D.</div><div class="project">Création de terrasse</div></div>
+            </div>
+          </div>
+          <div class="card testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="quote">« Ravalement de façade impeccable, bon rapport qualité-prix et communication au top pendant le chantier. »</p>
+            <div class="testimonial-author">
+              <span class="initials">CR</span>
+              <div><div class="name">Claire R.</div><div class="project">Ravalement de façade</div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</div>
+
+<script src="../js/admin.js"></script>
+</body>
+</html>

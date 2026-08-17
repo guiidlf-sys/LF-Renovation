@@ -1,12 +1,13 @@
-# LF Rénovation — Espace Pro
+# LF Rénovation
 
-Site pour un auto-entrepreneur spécialisé en **rénovation intérieure et extérieure**, présenté sous la forme d'une application de type tableau de bord (sidebar fixe, cartes, graphique de suivi) plutôt qu'un site vitrine classique.
+Site pour un auto-entrepreneur spécialisé en **rénovation intérieure et extérieure**, composé de deux parties :
 
-Thème sombre, dégradés violet/rose, typographie Space Grotesk + Inter.
-
-## Aperçu local
+- **Site public** (racine du repo) — site vitrine multi-pages classique, thème clair.
+- **Espace pro** (`/admin`) — tableau de bord interne (chiffre d'affaires, devis, chantiers), thème sombre violet/rose.
 
 Aucun outil de build n'est nécessaire, c'est du HTML/CSS/JS statique.
+
+## Aperçu local
 
 ```bash
 python3 -m http.server 8080
@@ -16,43 +17,70 @@ python3 -m http.server 8080
 ## Structure
 
 ```
-index.html            Application (sidebar + pages internes en JS)
-mentions-legales.html Page des mentions légales (thème assorti)
-css/style.css         Toute la feuille de style (thème sombre dashboard)
-js/main.js            Navigation, dropdowns, graphique SVG, formulaire, filtres
+index.html              Accueil (site public)
+services.html            Liste des services intérieur / extérieur
+realisations.html        Galerie de chantiers filtrable
+devis.html                Devis rapide (formulaire court)
+demande-chantier.html    Demande de chantier détaillée (adresse, budget, photos...)
+avis.html                  Avis clients
+apropos.html              À propos de l'artisan + zone d'intervention
+contact.html               Contact général
+mentions-legales.html    Mentions légales (thème public)
+
+admin/index.html          Espace pro : tableau de bord interne
+
+css/public.css            Styles du site public (thème clair)
+css/admin.css              Styles de l'espace pro (thème sombre)
+js/public.js                Nav, menu déroulant, galerie, formulaires (site public)
+js/admin.js                  Navigation interne, graphique, dropdowns (espace pro)
 ```
 
-## Navigation de l'application
+## Navigation du site public
 
-Tout se passe sur `index.html` : les sections ne sont pas des ancres mais des « pages »
-affichées/masquées en JavaScript (`.page[data-page]`), pilotées à la fois par :
+Le menu principal (répété sur chaque page) propose : Accueil, Services, Réalisations,
+un menu déroulant **Devis** (Devis rapide / Demande de chantier), Avis, À propos, Contact.
+Le lien actif est mis en évidence automatiquement selon la page (`js/public.js`).
 
-- la **sidebar** (Dashboard, Services, Réalisations, Devis, Avis clients) ;
-- les **pastilles d'onglets** en haut (Aperçu / Devis / Chantiers), raccourcis vers les mêmes pages.
+Un lien discret **« Espace pro »** en pied de page renvoie vers `admin/index.html`.
+Attention : il n'y a **aucune authentification réelle** (site 100% statique) — cette
+séparation n'est qu'une convention d'URL, pas une protection. Pour une vraie mise en
+production avec des données sensibles, il faudrait brancher un back-end avec
+authentification.
 
-Pages disponibles :
-- **Dashboard** — chiffre d'affaires, devis en cours, chantiers actifs, graphique de suivi.
-- **Services** — liste complète des prestations intérieur/extérieur.
-- **Réalisations** — galerie de chantiers filtrable (Tous / Intérieur / Extérieur).
-- **Devis** — formulaire de demande de devis + liste des devis + coordonnées.
-- **Avis clients** — témoignages.
+## Espace pro (`/admin`)
 
-« Paramètres » (bas de sidebar) ouvre `mentions-legales.html`. « Support » renvoie vers la page Devis.
+Application interne façon tableau de bord (sidebar, chiffre d'affaires, devis en
+cours, chantiers actifs, graphique de suivi). Voir le lien « Voir le site public »
+en haut de la sidebar pour revenir sur le site vitrine. Détails de fonctionnement
+inchangés par rapport à la version précédente (pages internes pilotées en JS,
+`js/admin.js`).
 
 ## À personnaliser avant mise en ligne
 
-- **Identité / coordonnées** : nom affiché « Ludovic » (`index.html`, en-tête), téléphone `06 XX XX XX XX`, e-mail `contact@lf-renovation.fr` — présents dans l'en-tête, la sidebar, la page Devis et `mentions-legales.html`.
-- **Chiffres** : chiffre d'affaires (`#revenue-value` + menu déroulant de périodes), devis en cours, chantiers actifs — toutes des données d'exemple codées dans `index.html`, à remplacer par vos vraies données (ou à brancher sur un back-end si besoin).
-- **Graphique** : les jeux de données du graphique « Suivi du chiffre d'affaires » (1S/1M/6M/1A) sont définis dans `js/main.js`, objet `datasets`.
-- **Avis clients** : témoignages d'exemple dans la page Avis, à remplacer par de vrais avis.
-- **Réalisations** : vignettes en dégradé de couleur en attendant de vraies photos. Remplacez le `style="background:..."` d'une `.gallery-thumb` par `background:url('images/mon-chantier.jpg') center/cover;` et déposez le fichier dans `images/`.
-- **Mentions légales** : SIRET, adresse, assureur décennal et hébergeur à compléter dans `mentions-legales.html`.
+- **Identité / coordonnées** : téléphone `06 XX XX XX XX`, e-mail `contact@lf-renovation.fr`,
+  ville `[Votre ville]` — répétés dans l'en-tête, le pied de page et les formulaires de
+  chaque page publique, ainsi que dans `mentions-legales.html`.
+- **Avis clients** (`avis.html`, aperçu sur `index.html`) : témoignages d'exemple à remplacer.
+- **Réalisations** (`realisations.html`, aperçu sur `index.html`) : vignettes en dégradé de
+  couleur en attendant de vraies photos. Remplacez le `style="background:..."` d'une
+  `.gallery-thumb` par `background:url('images/mon-chantier.jpg') center/cover;` et déposez
+  le fichier dans `images/`.
+- **Mentions légales** : SIRET, adresse, assureur décennal et hébergeur à compléter.
+- **Espace pro** : chiffre d'affaires, devis, chantiers — données d'exemple dans
+  `admin/index.html`, voir aussi `js/admin.js` pour les jeux de données du graphique.
 
-## Assistant / formulaire
+## Formulaires
 
-- La barre « Demandez quelque chose à l'assistant LF Rénovation » fait une recherche par mot-clé simple (voir `faq` dans `js/main.js`) et redirige vers la page pertinente. Aucune IA réelle n'est branchée.
-- Le formulaire de devis (`#devis-form`) fonctionne uniquement côté client : il affiche un message de confirmation mais n'envoie rien. Pour recevoir réellement les demandes, connectez-le à [Formspree](https://formspree.io), [EmailJS](https://www.emailjs.com) ou [Netlify Forms](https://docs.netlify.com/forms/setup/).
+Trois formulaires (`devis.html`, `demande-chantier.html`, `contact.html`) fonctionnent
+uniquement côté client : ils affichent un message de confirmation via
+`js/public.js` (attribut `data-success-form`) mais n'envoient rien. Pour recevoir
+réellement les demandes, connectez-les à un service comme
+[Formspree](https://formspree.io), [EmailJS](https://www.emailjs.com) ou
+[Netlify Forms](https://docs.netlify.com/forms/setup/).
 
 ## Déploiement
 
-Le site étant 100% statique, il peut être déployé gratuitement sur GitHub Pages, Netlify, Vercel ou tout hébergeur mutualisé classique.
+Le site étant 100% statique, il peut être déployé gratuitement sur GitHub Pages,
+Netlify, Vercel ou tout hébergeur mutualisé classique. Le dossier `/admin` sera
+alors accessible publiquement à `https://votre-domaine/admin/` — pensez à la
+remarque sur l'absence d'authentification ci-dessus.

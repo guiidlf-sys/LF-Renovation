@@ -222,6 +222,8 @@ section { padding: 90px 0; }
 .nav-dropdown-menu a:hover { background: var(--card-bg-strong); color: var(--accent-2); }
 .nav-dropdown-menu a small { color: var(--text-low); font-weight: 400; font-size: 0.78rem; }
 
+.nav-tip { display: none; }
+
 .header-actions { display: flex; align-items: center; gap: 16px; flex-shrink: 0; }
 
 .phone-link { display: flex; align-items: center; gap: 8px; font-weight: 600; font-size: 0.92rem; color: var(--text-hi); }
@@ -632,8 +634,10 @@ section { padding: 90px 0; }
     max-height: calc(100vh - 76px); overflow-y: auto;
   }
 
-  .site-header.nav-open .main-nav a { padding: 10px 0; width: 100%; }
+  .site-header.nav-open .main-nav a { padding: 10px 0; width: 100%; display: flex; flex-direction: column; gap: 2px; }
+  .site-header.nav-open .nav-tip { display: block; font-size: 0.76rem; font-weight: 400; color: var(--text-low); }
   .site-header.nav-open .nav-dropdown { width: 100%; }
+  .site-header.nav-open .nav-dropdown > a { flex-direction: row; justify-content: space-between; }
   .site-header.nav-open .nav-dropdown-menu {
     position: static; opacity: 1; visibility: visible; transform: none;
     box-shadow: none; border: none; background: transparent; padding: 0 0 0 14px; margin-top: 4px; display: none;

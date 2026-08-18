@@ -17,9 +17,17 @@
   <div class="container header-inner">
     <a href="index.html" class="logo"><span class="logo-mark">LF</span>LF <span>Rénovation</span></a>
     <nav class="main-nav">
-      <a href="index.html">Accueil</a>
-      <a href="services.html">Services</a>
-      <a href="realisations.html">Réalisations</a>
+      <a href="index.html">Accueil<span class="nav-tip">Retour à l'accueil</span></a>
+      <div class="nav-dropdown">
+        <a href="services.html">Services
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </a>
+        <div class="nav-dropdown-menu">
+          <a href="services.html#interieur">Rénovation intérieure<small>Peinture, sols, cuisine, salle de bain...</small></a>
+          <a href="services.html#exterieur">Rénovation extérieure<small>Façade, terrasse, toiture, clôtures...</small></a>
+        </div>
+      </div>
+      <a href="realisations.html">Réalisations<span class="nav-tip">Mes derniers chantiers, en photos</span></a>
       <div class="nav-dropdown">
         <a href="devis.html">Devis
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
@@ -29,9 +37,9 @@
           <a href="demande-chantier.html">Demande de chantier<small>Dossier détaillé avec photos</small></a>
         </div>
       </div>
-      <a href="avis.html">Avis</a>
-      <a href="apropos.html">À propos</a>
-      <a href="contact.html">Contact</a>
+      <a href="avis.html">Avis<span class="nav-tip">Ce qu'en pensent mes clients</span></a>
+      <a href="apropos.html">À propos<span class="nav-tip">Qui je suis, mes engagements</span></a>
+      <a href="contact.html">Contact<span class="nav-tip">Téléphone, e-mail, formulaire</span></a>
     </nav>
     <div class="header-actions">
       <a href="tel:+33600000000" class="phone-link">
@@ -78,7 +86,7 @@
   </div>
 </section>
 
-<section class="bg-light">
+<section class="bg-light" id="zone">
   <div class="container zone-wrap">
     <div class="zone-radar reveal">
       <div class="center-pin">
